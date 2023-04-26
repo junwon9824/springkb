@@ -1,0 +1,5 @@
+package sp0424.logger;
+
+public class MyFileLogger {
+
+}

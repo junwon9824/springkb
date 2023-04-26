@@ -1,0 +1,20 @@
+package sp0424.bean;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+import sp0424.logger.MyLogger;
+
+@Component
+public class MyCalc {
+	@Autowired //setLogger필요 없음.
+	@Qualifier(value="myFileLogger")
+	private MyLogger logger; //interface의 구현클래스를 찾아서 넣어줌.
+
+	public int plus(int i, int j) {
+		logger.print(i+"+"+j+"=");
+		return i + j;
+	}
+
+}

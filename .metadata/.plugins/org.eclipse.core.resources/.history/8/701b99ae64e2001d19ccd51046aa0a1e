@@ -1,0 +1,9 @@
+package sp0424.bean;
+
+public class NumberGuess {
+	
+	public NumberGuess() {
+	}
+	
+	
+}

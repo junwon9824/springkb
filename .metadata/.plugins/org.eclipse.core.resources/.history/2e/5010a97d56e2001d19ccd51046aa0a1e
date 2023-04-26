@@ -1,0 +1,19 @@
+package sp0424.bean;
+
+public class HelloBean {
+
+	private String name;
+
+	public String sayHello() {
+		return "Hello";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

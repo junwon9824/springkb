@@ -1,0 +1,9 @@
+package sp0425_aop.service;
+
+public class HelloService {
+
+	public String sayHello() {
+		return "Hello";
+	}
+
+}

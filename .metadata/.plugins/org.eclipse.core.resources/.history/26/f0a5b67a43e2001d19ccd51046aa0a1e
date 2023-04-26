@@ -1,0 +1,20 @@
+package sp0424;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import sp0424.bean.HelloBean;
+
+public class Main01 {
+//	스프링 비적용 코드
+//	public static void main(String[] args) {
+//		HelloBean hb = new HelloBean();
+//		String msg = hb.sayHello();
+//		System.out.println(msg);
+//	}
+	
+//	스프링 적용 코드
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+	}
+}

@@ -1,0 +1,11 @@
+package com.itskb.myapp.calculator;
+
+public class InterestCalaculatorService {
+
+	@Compon
+	@qual
+	
+	private InterestCalaculator calaculator = new LoanInterestCalaculator();
+	
+	
+}

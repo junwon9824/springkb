@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ml" class="sp0424.logger.MyLogger">
+	</bean>
+	<bean id="hb" class="sp0424.bean.HelloBean">
+		<property name="logger" ref="ml"></property> 
+		<property name="name" value="홍길동"></property> <!-- set메서드 호출 -->
+	</bean>
+
+</beans>

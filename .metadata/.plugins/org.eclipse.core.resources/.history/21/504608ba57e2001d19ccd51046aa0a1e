@@ -1,0 +1,22 @@
+package sp0424.bean;
+
+public class HelloBean {
+
+	private String name;
+	//È£ÃâÈ½¼ö Ãâ·Â¿ë °´Ã¼
+	private MyLogger logger;
+	
+	public String sayHello() {
+		logger.print();
+		return "Hello" + (name == null?"":" "+name);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

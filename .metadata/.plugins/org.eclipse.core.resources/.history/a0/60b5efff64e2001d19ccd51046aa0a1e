@@ -1,0 +1,14 @@
+package sp0424.bean;
+
+public class NumberGuess {
+	
+	public NumberGuess() {
+	}
+
+	public String checkNum(int userNum) {
+		if (userNum)
+		return null;
+	}
+	
+	
+}

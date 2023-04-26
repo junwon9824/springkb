@@ -1,0 +1,10 @@
+package sp0425_aop.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class MyAspect2 {
+
+	
+	
+}

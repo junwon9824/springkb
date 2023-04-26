@@ -1,0 +1,6 @@
+package sp0424.logger;
+
+public interface MyLogger {
+
+	public void print(String string);
+}

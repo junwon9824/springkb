@@ -1,0 +1,21 @@
+package sp0425_aop.aspect;
+
+import java.security.Signature;
+
+import org.aspectj.lang.JoinPoint;
+
+public class MyAspect {
+
+	// TODO Auto-generated constructor stub
+
+	public void printBefore(JoinPoint jp) {
+		System.out.println("Before!!");
+		Signature sig = jp.getSignature();
+		String name = sig.getName();
+		System.out.println("target name" + name);
+		Object[] args = jp.getArgs();
+		System.out.println("Arg °¹¼ö: " + args.length);
+
+	}
+
+}

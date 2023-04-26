@@ -1,0 +1,19 @@
+package sp0424;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import sp0424.bean.HelloBean;
+
+public class Main03 {
+
+	
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+		MyCalc hb = context.getBean(MyCalc.class);
+		String msg = hb.sayHello();
+		System.out.println(msg);
+		
+	}
+}

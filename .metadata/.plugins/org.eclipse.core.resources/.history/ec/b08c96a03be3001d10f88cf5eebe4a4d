@@ -1,0 +1,15 @@
+package com.multicampus.kb03;
+
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class NumberGuess {
+
+	@RequestMapping("/number_guess")
+	public String solve(int a) { //핸들러 메서드
+ 		return "number_guess.jsp";
+	}
+	
+}

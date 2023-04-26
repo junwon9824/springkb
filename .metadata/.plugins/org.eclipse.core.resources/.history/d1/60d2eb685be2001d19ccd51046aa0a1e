@@ -1,0 +1,9 @@
+package sp0424.logger;
+
+public class MyLogger {
+
+	public void print(String string) {
+		System.out.println(string);
+	}
+
+}

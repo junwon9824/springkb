@@ -1,0 +1,16 @@
+package sp0424.bean;
+
+import org.springframework.stereotype.Component;
+
+import sp0424.logger.MyLogger;
+
+@Component
+public class MyCalc {
+	
+	private MyLogger logger;
+
+	public int plus(int i, int j) {
+		return i + j;
+	}
+
+}

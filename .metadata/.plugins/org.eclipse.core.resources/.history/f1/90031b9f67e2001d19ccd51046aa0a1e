@@ -1,0 +1,30 @@
+package sp0424.bean;
+
+public class NumberGuess {
+	
+	public NumberGuess() {
+	}
+
+	public NumberGuess(int answer) {
+		super();
+		this.answer = answer;
+	}
+
+	public int getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(int answer) {
+		this.answer = answer;
+	}
+
+	public String checkNum(int userNum) {
+		if (userNum > answer)
+			return "낮춰주세요";
+		if (userNum < answer)
+			return "높여주세요";
+		else
+			return "정답입니다";
+	}
+
+}

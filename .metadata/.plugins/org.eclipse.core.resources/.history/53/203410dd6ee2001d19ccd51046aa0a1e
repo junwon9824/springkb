@@ -1,0 +1,12 @@
+package sp0424.bean;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyCalc {
+
+	public int plus(int i, int j) {
+		return i + j;
+	}
+
+}

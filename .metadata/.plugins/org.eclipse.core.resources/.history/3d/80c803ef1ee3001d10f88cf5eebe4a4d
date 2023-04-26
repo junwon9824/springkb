@@ -1,0 +1,12 @@
+package sp0425_aop.aspect;
+
+public class MyAspect {
+
+	// TODO Auto-generated constructor stub
+
+	public void printBefore() {
+		System.out.println("Before!!");
+	}
+
+	
+}

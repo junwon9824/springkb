@@ -1,0 +1,9 @@
+package sp0424.bean;
+
+public class MyScreenLogger implements MyLogger{
+	
+	public void print(String str) {
+		System.out.println("[Screen] "+str);
+	}
+
+}

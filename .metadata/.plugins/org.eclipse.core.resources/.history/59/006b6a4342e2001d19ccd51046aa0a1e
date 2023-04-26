@@ -1,0 +1,12 @@
+package sp0424.bean;
+
+public class HelloBean {
+
+	public String sayHello() {
+		
+		return null;
+	}
+
+	
+	
+}

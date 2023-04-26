@@ -1,0 +1,19 @@
+package sp0424;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import sp0424.bean.HelloBean;
+
+public class 숫자맞추기 {
+	
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		System.out.println("** 숫자맞추기  게임 for SpringFW **");
+		System.out.println("1~100 사이 컴퓨터의 숫자를 맞춰 보세요");
+		while() {
+			
+		}
+	}
+}

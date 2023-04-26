@@ -1,0 +1,5 @@
+package sp0425_aop.aspect;
+
+public class MyAspect2 {
+
+}

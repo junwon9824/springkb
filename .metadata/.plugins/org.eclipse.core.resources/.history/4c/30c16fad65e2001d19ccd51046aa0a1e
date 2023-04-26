@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 화면에 출력 -->
+	<bean id="ml" class="sp0424.logger.MyScreenLogger">
+	</bean>
+	<!-- 파일에 출력 -->
+	<bean id="mfl" class="sp0424.logger.MyFileLogger">
+	</bean>
+<!-- 	<bean id="hb" class="sp0424.bean.HelloBean">
+		<property name="logger" ref="mfl"></property> 
+		<property name="name" value="홍길동"></property> set메서드 호출
+	</bean> -->
+	
+	<bean id="hb" class="sp0424.bean.HelloBean" init-method="myInit">
+		<constructor-arg name="name" value="김길동"></constructor-arg>
+		<constructor-arg name="logger" ref="ml"></constructor-arg>
+		<!-- 순서는 생성자의 매개변수 순서를 따름 -->
+	</bean>  
+	
+	<bean id="ng" class="sp0424.bean.NumberGuess">
+		<constructor-arg name="answer" value=35></constructor-arg>
+	</bean>
+
+</beans>

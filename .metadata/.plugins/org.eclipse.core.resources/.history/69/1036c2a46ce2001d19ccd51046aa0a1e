@@ -1,0 +1,8 @@
+package sp0424.bean;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyCalc {
+
+}

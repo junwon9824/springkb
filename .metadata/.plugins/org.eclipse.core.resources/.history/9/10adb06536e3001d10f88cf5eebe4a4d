@@ -1,0 +1,11 @@
+package com.multicampus.kb03;
+
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class MyHello {
+
+	
+	
+}

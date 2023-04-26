@@ -1,0 +1,13 @@
+package com.itskb.myapp.calculator;
+
+import org.springframework.stereotype.Component;
+
+public class InterestCalaculatorService {
+
+	@Component(name="")
+	@qual
+	
+	private InterestCalaculator calaculator = new LoanInterestCalaculator();
+	
+	
+}

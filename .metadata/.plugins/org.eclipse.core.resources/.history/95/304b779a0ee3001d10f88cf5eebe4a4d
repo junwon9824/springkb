@@ -1,0 +1,13 @@
+package sp0425_aop;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main01 {
+
+	public static void main(String[] args) {
+		String path="applicationContext.xml";
+		ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext(path);
+		
+	}
+
+}

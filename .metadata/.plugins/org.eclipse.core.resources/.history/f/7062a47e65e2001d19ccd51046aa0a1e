@@ -1,0 +1,20 @@
+package sp0424.bean;
+
+public class NumberGuess {
+
+	private int answer;
+
+	public NumberGuess() {
+	}
+
+	public NumberGuess(int answer) {
+		super();
+		this.answer = answer;
+	}
+
+	public String checkNum(int userNum) {
+		if (userNum)
+			return null;
+	}
+
+}

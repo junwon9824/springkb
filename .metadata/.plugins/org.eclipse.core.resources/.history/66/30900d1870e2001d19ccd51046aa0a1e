@@ -1,0 +1,11 @@
+package sp0424.logger;
+
+import org.springframework.stereotype.Component;
+
+@Component("file")
+public class MyFileLogger implements MyLogger{
+	
+	public void print(String str) {
+		System.out.println("[file] "+str);
+	}
+}

@@ -1,0 +1,14 @@
+package sp0425_aop.aspect;
+
+import org.aspectj.lang.JoinPoint;
+
+public class MyAspect {
+
+	// TODO Auto-generated constructor stub
+
+	public void printBefore(JoinPoint jp) {
+		System.out.println("Before!!");
+		
+	}
+	
+}

@@ -1,0 +1,12 @@
+package sp0424;
+
+import sp0424.bean.HelloBean;
+
+public class Main01 {
+//	public static void main(String[] args) {
+//		//스프링 비적용 코드
+//		HelloBean hb = new HelloBean();
+//		String msg = hb.sayHello();
+//		System.out.println(msg);
+//	}
+}

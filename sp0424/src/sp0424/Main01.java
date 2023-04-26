@@ -1,0 +1,29 @@
+package sp0424;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import sp0424.bean.HelloBean;
+
+public class Main01 {
+//	스프링 비적용 코드
+//	public static void main(String[] args) {
+//		HelloBean hb = new HelloBean();
+//		String msg = hb.sayHello();
+//		System.out.println(msg);
+//	}
+	
+//	스프링 적용 코드
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		// 얘가 xml을 읽어서 객체들을 생성해줌. 기본생성자들을 호출.(기본생성자가 있어야됨!)
+		
+//		HelloBean hb = (HelloBean)context.getBean("hb");
+//		HelloBean hb = context.getBean(HelloBean.class);	//HelloBean타입이 하나가 아니면 오류 발생 
+		HelloBean hb = context.getBean("hb",HelloBean.class);
+ 
+		String msg = hb.sayHello();
+		System.out.println(msg);
+		
+	}
+}

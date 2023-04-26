@@ -1,0 +1,14 @@
+package sp0425_aop.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class MyAspect2 {
+	@Before(value = "execution(* MyCalc.*(..))")
+	public void before() {
+		System.out.println("½ÇÇàÀü ...");
+		
+	}
+
+}

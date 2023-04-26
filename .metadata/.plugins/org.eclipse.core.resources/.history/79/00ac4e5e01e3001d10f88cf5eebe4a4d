@@ -1,0 +1,7 @@
+package com.itskb.myapp.calculator;
+
+public class SavingInterestCalaculator implements InterestCalaculator {
+
+	static double RATE;
+
+}

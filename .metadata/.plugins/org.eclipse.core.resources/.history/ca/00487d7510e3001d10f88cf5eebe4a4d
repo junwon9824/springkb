@@ -1,0 +1,9 @@
+package sp0425_aop.aspect;
+
+public class MyAspect {
+
+	public MyAspect() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
