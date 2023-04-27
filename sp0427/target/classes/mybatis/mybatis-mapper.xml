@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="config.BbsMapper">
+	<select id="selectAll" resultType="sp0427.dto.BbsDto">
+		select * from BBS order by no
+		DESC
+	</select>
+	<select id="selectOne" resultType="sp0427.dto.BbsDto">
+		select * from BBS where no=${no}
+	</select>
+
+	<select id="count" resultType="int">
+		select count(*) from BBS
+	</select>
+
+	<insert id="insert">
+		insert into bbs(no, title, writer_id ,
+		content,regdate)
+		values(bbs_seq.nextval , #{title} ,#{writer_id}
+		,#{content} ,SYSDATE)
+
+	</insert>
+
+
+</mapper>

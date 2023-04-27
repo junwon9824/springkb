@@ -7,9 +7,12 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.multicampus.kb03.dto.MultiCalcDto;
 
 @Controller
 public class multiplyController {
@@ -46,7 +49,45 @@ public class multiplyController {
 	}
 
 	@RequestMapping(value = "/multi_calc_game_main", method = RequestMethod.POST)
-	public String multi_calc_game_main_post(Model model, @RequestParam(value = "n1") int n1,
+	public String multi_calc_game_main_post(Model model, @ModelAttribute("mul") MultiCalcDto dto, HttpSession session) {
+
+		Integer game_seq = (Integer) session.getAttribute("game_seq");
+
+		if (game_seq == 1) {
+			start = System.currentTimeMillis();
+
+		}
+
+		game_seq++;
+		session.setAttribute("game_seq", game_seq);
+
+		System.out.println("main POST");
+		String result = dto.getN1() + " * " + dto.getN2() + " = " + dto.getAns();
+		System.out.println("result=" + result);
+
+		if (game_seq == 11) {
+			end = System.currentTimeMillis();
+			long tot = (end - start) / 1000;
+			System.out.println(tot);
+			System.out.println("걸린시간" + tot / 60 + "분" + tot % 60 + "초");
+			model.addAttribute("time_interval", "걸린시간은 " + tot / 60 + "분" + tot % 60 + "초");
+
+		}
+
+		if (dto.getN1() * dto.getN2() == dto.getAns()) {
+			result += " 정답입니다";
+
+		} else {
+			result += " 오답입니다.정답은 " + (dto.getN1() * dto.getN2());
+		}
+
+		model.addAttribute("result", result);
+		return multi_calc_game_main(model, session);
+
+	}
+
+	@RequestMapping(value = "/multi_calc_game_main_old", method = RequestMethod.POST)
+	public String multi_calc_game_main_old(Model model, @RequestParam(value = "n1") int n1,
 			@RequestParam(value = "n2") int n2, @RequestParam(value = "ans") int ans, HttpSession session) {
 
 		Integer game_seq = (Integer) session.getAttribute("game_seq");

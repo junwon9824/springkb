@@ -16,17 +16,21 @@
 	<form action="" method="post">
 
 
-	  <input type="number"
-			name="n1" value="${r1}" readonly="readonly"
+		<input type="number" name="n1" value="${r1}" readonly="readonly"
 			style="text-align: center; width: 5em;"> * <input
 			type="number" name="n2" value="${r2}" readonly="readonly"
 			style="text-align: center; width: 5em;"> = <input
 			type="number" name="ans" style="text-align: center; width: 5em;">
 		<br> <input type="submit" value="정답확인">
-		
+
 	</form>
 
 	<div>${result}</div>
+	<div>${time_interval}</div>
+	<div>${mul.n1}</div>
+	<div>${mul.n2}</div>
+	<div>${mul.ans}</div>
+
 
 </body>
 </html>
