@@ -9,3 +9,5 @@ C:\Users\student\Documents\workspace-sts-3.9.12.RELEASE\.metadata\.plugins\org.e
 \SP_WS_01\src\main\java
 C:\Users\student\Documents\workspace-sts-3.9.12.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2970314190.index
 \mvc_0425\src\main\java
+C:\Users\student\Documents\workspace-sts-3.9.12.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3152893068.index
+\SP_HW_01\src\main\java
