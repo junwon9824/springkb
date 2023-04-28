@@ -13,7 +13,6 @@
 	이름 ${name}
 	<br> 이메일 ${email}
 	<br> 연락처 ${tel}
-	<br> 나는 ${status}
 
 	<br>
 
