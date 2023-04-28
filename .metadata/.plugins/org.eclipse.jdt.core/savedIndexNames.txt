@@ -9,7 +9,6 @@ INDEX VERSION 1.131+C:\Users\student\Documents\workspace-sts-3.9.12.RELEASE\.met
 3200614203.index
 1403223970.index
 1034988885.index
-2699721387.index
 3354607904.index
 3581163120.index
 3790087164.index

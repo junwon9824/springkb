@@ -9,15 +9,15 @@
 <body>
 	<h1>Login</h1>
 
-
-	이메일
-	<input type="text" name="email">
-	<br> 비밀번호
-	<input type="text" name="password">
-	<hr>
+	<form action="login" method="post">
 
 
-	<input type="submit" value="로그인" onclick="location.href='personal'">
+		이메일 <input type="text" name="email"> <br> 비밀번호 <input
+			type="text" name="password">
+		<hr>
+
+		<input type="submit" value="로그인">
+	</form>
 
 	<input type="submit" value="회원 가입" onclick="location.href='Register'">
 

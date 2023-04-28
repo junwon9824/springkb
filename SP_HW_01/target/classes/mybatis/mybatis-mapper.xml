@@ -13,7 +13,7 @@
 	<select id="selectOne"
 		resultType="com.itskb.myapp.dto.CustomerDto">
 		select * from CUSTOMER where
-		name=${name}
+		email=#{email}
 	</select>
 
 	<select id="count" resultType="int">
@@ -23,7 +23,6 @@
 	<insert id="insert">
 		insert into CUSTOMER(name, email, tel,
 		password,password2)
-
 		values(#{name}, #{email}
 		,#{tel}
 		,#{password}

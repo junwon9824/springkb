@@ -40,7 +40,9 @@ public class CustomerController {
 	public String customer_login_post(@RequestParam("email") String email, HttpSession httpSession,
 			HttpServletRequest request) {
 
+		System.out.println("AA");
 		CustomerDto customerDto = customerDao.selectOne(email);
+		System.out.println("BB");
 
 		String name = customerDto.getName();
 		String tel = customerDto.getTel();
@@ -51,7 +53,7 @@ public class CustomerController {
 		httpSession.setAttribute("email", email);
 		httpSession.setAttribute("tel", tel);
 
-		System.out.println("cccc" + httpSession.getAttribute("name"));
+		System.out.println("cccc" + customerDto.toString());
 
 		return "redirect:/customer/personal";
 
@@ -71,7 +73,7 @@ public class CustomerController {
 		model.addAttribute("name", name);
 		model.addAttribute("tel", tel);
 
-		return "Personal";
+		return "customer/Personal";
 
 	}
 
