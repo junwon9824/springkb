@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
@@ -36,27 +37,41 @@ public class CustomerController {
 	}
 
 	@RequestMapping(value = "/customer/login", method = RequestMethod.POST)
-	public String customer_login_post(@RequestParam("name") String name, @RequestParam("email") String email,
-			@RequestParam("tel") String tel, HttpSession httpSession) {
+	public String customer_login_post(@RequestParam("email") String email, HttpSession httpSession,
+			HttpServletRequest request) {
+
+		CustomerDto customerDto = customerDao.selectOne(email);
+
+		String name = customerDto.getName();
+		String tel = customerDto.getTel();
+
+		httpSession = request.getSession();
+
 		httpSession.setAttribute("name", name);
 		httpSession.setAttribute("email", email);
 		httpSession.setAttribute("tel", tel);
 
+		System.out.println("cccc" + httpSession.getAttribute("name"));
+
 		return "redirect:/customer/personal";
+
 	}
 
 	@RequestMapping(value = "/customer/personal", method = RequestMethod.GET)
-	public String customer_personal(Model model, HttpSession httpSession) {
+	public String customer_personal(Model model, HttpSession httpSession, HttpServletRequest request) {
 
+		httpSession = request.getSession();
 		String email = (String) httpSession.getAttribute("email");
+		String name = (String) httpSession.getAttribute("name");
+		String tel = (String) httpSession.getAttribute("tel");
 
-		CustomerDto customerDto = customerDao.selectOne(email);
+		System.out.println("emaildddd" + email);
 
-		model.addAttribute("email", customerDto.getEmail());
-		model.addAttribute("name", customerDto.getName());
-		model.addAttribute("tel", customerDto.getTel());
+		model.addAttribute("email", email);
+		model.addAttribute("name", name);
+		model.addAttribute("tel", tel);
 
-		return "customer/personal";
+		return "Personal";
 
 	}
 
