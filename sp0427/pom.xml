@@ -6,6 +6,7 @@
 	<artifactId>sp0427</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
+	
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -29,6 +30,7 @@
 			<artifactId>commons-dbcp2</artifactId>
 			<version>2.9.0</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>org.mybatis</groupId>
