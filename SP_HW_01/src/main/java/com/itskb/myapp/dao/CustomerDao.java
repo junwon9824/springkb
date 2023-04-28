@@ -18,8 +18,8 @@ public class CustomerDao {
 	@Autowired
 	private SqlSessionTemplate tpl;
 
-	public CustomerDto selectOne(int no) {
-		return tpl.selectOne("selectOne", 4);
+	public CustomerDto selectOne(String email) {
+		return tpl.selectOne("selectOne", email);
 	}
 
 	public List<CustomerDto> selectAll() {
@@ -36,7 +36,6 @@ public class CustomerDao {
 	public void insert(CustomerDto customerDto) {
 
 		tpl.insert("insert", customerDto);
-
 	}
 
 }

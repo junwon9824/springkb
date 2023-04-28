@@ -8,12 +8,16 @@
 </head>
 <body>
 	<h1>Personal</h1>
-	<form action="">
 
-		이름 ${name} <br> 이메일 ${email } <br> 연락처 ${tel} <br> 나는
-		${status } <br>
 
-	</form>
+	이름 ${name}
+	<br> 이메일 ${email}
+	<br> 연락처 ${tel}
+	<br> 나는 ${status}
+
+	<br>
+
+
 
 </body>
 </html>

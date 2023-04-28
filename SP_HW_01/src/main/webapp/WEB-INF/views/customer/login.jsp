@@ -16,11 +16,10 @@
 	<input type="text" name="password">
 	<hr>
 
-	<input type="submit" value="로그인"
-		onclick="location.href='customer/personal'">
 
-	<input type="submit" value="회원 가입"
-		onclick="location.href='customer/Register'">
+	<input type="submit" value="로그인" onclick="location.href='personal'">
+
+	<input type="submit" value="회원 가입" onclick="location.href='Register'">
 
 
 </body>

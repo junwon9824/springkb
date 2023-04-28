@@ -38,10 +38,14 @@ public class CustomerController {
 		return "customer/login";
 	}
 
-	@RequestMapping(value = "/customer/personal")
-	public String customer_personal() {
+	@RequestMapping(value = "/customer/personal", method = RequestMethod.GET)
+	public String customer_personal(Model model) {
 
+		CustomerDto customerDto=customerDao.selectOne();
+		
+		model.addAttribute("name",);
 		return "customer/personal";
+
 	}
 
 	@RequestMapping(value = "/customer/modify")
@@ -50,14 +54,12 @@ public class CustomerController {
 		return "customer/modify";
 	}
 
-	@RequestMapping(value = "/customer/Register")
+	@RequestMapping(value = "/customer/Register", method = RequestMethod.GET)
 	public String customer_Register() {
-
 		return "customer/Register";
-
 	}
 
-	@RequestMapping(value = "/customer/Register_final")
+	@RequestMapping(value = "/customer/Register", method = RequestMethod.POST)
 	public String Register_final(@RequestParam("name") String name, @RequestParam("email") String email,
 			@RequestParam("tel") String tel, @RequestParam("password") String password,
 			@RequestParam("password2") String password2) {
@@ -69,11 +71,14 @@ public class CustomerController {
 		customerDto.setTel(tel);
 		customerDto.setPassword(password);
 		customerDto.setPassword2(password2);
+		System.out.println(customerDto);
+		if (password.equals(password2)) {
 
-		customerDao.insert(customerDto);
+			customerDao.insert(customerDto);
+		}
 
+		System.out.println("success");
 		return "customer/login";
-
 	}
 
 }
