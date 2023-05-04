@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="mvc_0425" path="/kb03" reloadable="true" source="org.eclipse.jst.jee.server:mvc_0425"/><Context docBase="mvc_0426" path="/mvc_0426" reloadable="true" source="org.eclipse.jst.jee.server:mvc_0426"/><Context docBase="project" path="/finance" reloadable="true" source="org.eclipse.jst.jee.server:project"/><Context docBase="mvc_0428" path="/mvc_0428" reloadable="true" source="org.eclipse.jst.jee.server:mvc_0428"/><Context docBase="SP_HW_01" path="/SP_HW_01" reloadable="true" source="org.eclipse.jst.jee.server:SP_HW_01"/><Context docBase="kb_project" path="/project" reloadable="true" source="org.eclipse.jst.jee.server:kb_project"/><Context docBase="mvc0502" path="/mvc0502" reloadable="true" source="org.eclipse.jst.jee.server:mvc0502"/></Host>
+      <Context docBase="mvc0502" path="/mvc0502" reloadable="true" source="org.eclipse.jst.jee.server:mvc0502"/><Context docBase="mvc0503" path="/mvc0503" reloadable="true" source="org.eclipse.jst.jee.server:mvc0503"/></Host>
     </Engine>
   </Service>
 </Server>
